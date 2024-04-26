@@ -27,6 +27,11 @@
 
 </div>
 
+### Demo Showcase 🎥🌟
+
+<p align="center">
+    <a href="" target="_blank"><img src="./status.svg" alt="bangumi Status" width="70%"/></a>
+</p>
 
 ### Getting Started 🚀
 
