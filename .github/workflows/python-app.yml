@@ -1,0 +1,45 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python 🐍
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python 📚
+
+name: Python application 🚀
+
+# 表示每当我们推送提交（Push Commits）或合并请求（Pull Request）时,该工作流会自动触发执行。⏰
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron:  '0 0 * * *'  # Cron 表达式 🕰️
+    
+permissions:
+  contents: write  # 允许工作流写入仓库内容 ✍️
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest 🐧
+
+    steps:
+    - uses: actions/checkout@v4 🛎️
+    - name: Set up Python 3.10 🐍
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies 📦
+      run: |
+        python -m pip install --upgrade pip
+        # 若 requirements.txt 存在
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Generate svg 🎨
+      run: |
+        python main.py
+    - name: Upload to this repo 🔼
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add .
+        git commit -m "🚀 Update SVG on $(date +'%Y-%m-%d')"
+        git push -u origin master
+      env:
+        GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用预定义的 GITHUB_TOKEN 密钥 🔑
