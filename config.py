@@ -1,5 +1,5 @@
 USER_INFO = {
-    "name": "ryanbgm",   # 用户名
+    "name": "681469",   # 用户名
 
     # 请确保你看过的所有番数量大于 cols x rows 这个值
     "cols": 10,          # 行数
