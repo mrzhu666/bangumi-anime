@@ -11,6 +11,7 @@ on:
     branches: [ "main" ]
   schedule:
     - cron:  '0 0 * * *'  # Cron 表达式 🕰️
+  workflow_dispatch:
     
 permissions:
   contents: write  # 允许工作流写入仓库内容 ✍️
