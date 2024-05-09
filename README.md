@@ -25,15 +25,12 @@
 
 </div>
 
-<<<<<<< HEAD
-=======
 ### Demo Showcase 🎥🌟
 
 <p align="center">
     <a href="" target="_blank"><img src="./status.svg" alt="bangumi Status" width="70%"/></a>
 </p>
 
->>>>>>> f836d151fe6d1273fcbdd0b29f5d91fd1ccc36c2
 ### Getting Started 🚀
 
 To get started, simply fork this repository and modify the contents of the config.py file:
