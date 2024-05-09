@@ -16,12 +16,20 @@ subject_type =>
 3 为 音乐
 4 为 游戏
 6 为 三次元
+
+
+anime_type =>
+1 => 想看
+2 => 看过
+3 => 在看
+4 => 搁置
+5 => 抛弃
 '''
 
 CODE_CONFIG = {
     "limit": 25,
     "subject_type": 2,  # int only, TODO: support List
-    "anime_type": -1,  # int | List, if -1, show all
+    "anime_type": [1, 2, 3],  # int | List, if -1, show all
     "height": 180,
     "width": 128,
     "delta_h": 10,
