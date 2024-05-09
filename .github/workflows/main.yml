@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron:  '0 0 * * *'  # Cron 表达式 🕰️
+    - cron:  '0 0 * * 1'  # Cron 表达式 🕰️
   workflow_dispatch:
     
 permissions:

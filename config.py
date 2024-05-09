@@ -29,7 +29,7 @@ anime_type =>
 CODE_CONFIG = {
     "limit": 25,
     "subject_type": 2,  # int only, TODO: support List
-    "anime_type": [1, 2, 3],  # int | List, if -1, show all
+    "anime_type": [2, 3],  # int | List, if -1, show all
     "height": 180,
     "width": 128,
     "delta_h": 10,
